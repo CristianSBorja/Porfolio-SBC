@@ -4,7 +4,7 @@ body {
     color: #ffffff;
 
     /* Fondo con la imagen local */
-    background-image: url('fondo abstracto futurista.jpg');
+    background-image: url('fonde abstracto futurista1.jfif');
     background-size: cover; /* La imagen cubre todo el espacio */
     background-position: center; /* La imagen se centra */
     background-attachment: fixed; /* El fondo no se mueve con el scroll */
