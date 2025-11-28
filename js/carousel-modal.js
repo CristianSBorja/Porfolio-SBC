@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    for (let i = 1; i <= 6; i++) initializeCarousel(i);
+    for (let i = 1; i <= 9; i++) initializeCarousel(i);
 
     const imageModal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
