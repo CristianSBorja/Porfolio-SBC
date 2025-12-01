@@ -29,15 +29,22 @@
 <header class="bg-[#0d0d0d] text-white py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
     <a href="#inicio" class="flex items-center gap-3">
         <img src="./AlpacaDev.jpg" alt="Logo de Alpaca Dev" class="h-10 w-auto rounded-full">
-        <span class="text-xl font-bold tracking-widest uppercase">AlpacaDev</span>
+        <span class="text-xl font-bold tracking-widest uppercase">Alpaca Dev</span>
     </a>
-    <nav>
-        <div class="flex md:flex space-x-8 text-sm">
+    <nav class="flex items-center">
+        <!-- Menú para escritorio -->
+        <div class="hidden md:flex space-x-8 text-sm">
             <a href="#nosotros" class="hover:text-gray-400 transition-colors duration-300">Nosotros</a>
             <a href="#habilidades" class="hover:text-gray-400 transition-colors duration-300">Habilidades</a>
             <a href="#proyectos" class="hover:text-gray-400 transition-colors duration-300">Proyectos</a>
             <a href="#contacto" class="hover:text-gray-400 transition-colors duration-300">Contacto</a>
         </div>
+        <!-- Botón de menú móvil (hamburguesa) -->
+        <button id="menu-btn" class="md:hidden z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
     </nav>
 </header>
 
@@ -509,8 +516,20 @@
     <button id="close-modal" class="absolute top-4 right-6 text-white text-5xl font-bold hover:text-gray-300 transition-colors z-10">&times;</button>
 </div>
 
+<!-- Menú de navegación móvil -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0d0d0d] z-40 hidden flex-col items-center justify-center text-center">
+    <nav class="flex flex-col space-y-8 text-2xl">
+        <a href="#nosotros" class="mobile-link hover:text-gray-400">Nosotros</a>
+        <a href="#habilidades" class="mobile-link hover:text-gray-400">Habilidades</a>
+        <a href="#proyectos" class="mobile-link hover:text-gray-400">Proyectos</a>
+        <a href="#contacto" class="mobile-link hover:text-gray-400">Contacto</a>
+    </nav>
+</div>
+
+
 <!-- carga lógica carrusel/modal externa -->
 <script src="js/carousel-modal.js" defer></script>
 <script src="js/contact-form.js" defer></script>
+<script src="js/navbar.js" defer></script>
 </body>
 </html>
