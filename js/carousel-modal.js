@@ -27,20 +27,66 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalImage = document.getElementById('modal-image');
     const modalContent = document.getElementById('modal-content');
     const closeModalBtn = document.getElementById('close-modal');
-    const carouselImages = document.querySelectorAll('.grid-cols-1.md\\:grid-cols-2 .w-full.h-96 img');
+    const prevModalBtn = document.getElementById('prev-modal');
+    const nextModalBtn = document.getElementById('next-modal');
+
+    let currentGroupImages = [];
+    let currentImageIndex = 0;
 
     function openModal(src) {
         modalImage.src = src;
         imageModal.classList.remove('hidden');
     }
+
+    function updateModalImage() {
+        if (currentGroupImages.length > 0) {
+            modalImage.src = currentGroupImages[currentImageIndex];
+            modalImage.classList.remove('zoomed'); // Quitar zoom al cambiar
+        }
+    }
+
     function closeModal() {
         imageModal.classList.add('hidden');
         modalImage.classList.remove('zoomed');
         modalImage.src = '';
     }
-    carouselImages.forEach(img => img.addEventListener('click', () => openModal(img.src)));
+
+    // Seleccionar todas las imágenes dentro de los carruseles
+    const carouselImages = document.querySelectorAll('[id^="carousel-"] img');
+    
+    carouselImages.forEach(img => {
+        img.addEventListener('click', () => {
+            // Encontrar el carrusel padre para obtener el grupo de imágenes
+            const parentCarousel = img.closest('[id^="carousel-"]');
+            if (parentCarousel) {
+                const images = parentCarousel.querySelectorAll('img');
+                currentGroupImages = Array.from(images).map(i => i.src);
+                currentImageIndex = currentGroupImages.indexOf(img.src);
+                openModal(img.src);
+            }
+        });
+    });
+
     closeModalBtn.addEventListener('click', closeModal);
     modalContent.addEventListener('click', (e) => { if (e.target === modalContent) closeModal(); });
     modalImage.addEventListener('click', (e) => { e.stopPropagation(); modalImage.classList.toggle('zoomed'); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && imageModal && !imageModal.classList.contains('hidden')) closeModal(); });
+    
+    // Eventos para botones de navegación del modal
+    if (prevModalBtn) prevModalBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateModal(-1); });
+    if (nextModalBtn) nextModalBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateModal(1); });
+
+    function navigateModal(direction) {
+        if (currentGroupImages.length > 0) {
+            currentImageIndex = (currentImageIndex + direction + currentGroupImages.length) % currentGroupImages.length;
+            updateModalImage();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => { 
+        if (imageModal && !imageModal.classList.contains('hidden')) {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowLeft') navigateModal(-1);
+            if (e.key === 'ArrowRight') navigateModal(1);
+        }
+    });
 });

@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const subject = encodeURIComponent(`Nuevo Mensaje de Contacto de: ${name}`);
         const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
 
-        const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
 
-        window.location.href = mailtoLink;
+        window.open(gmailLink, '_blank');
 
-        estado.textContent = "Abriendo tu cliente de correo para enviar el mensaje... ¡Recuerda pulsar Enviar!";
+        estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
         estado.className = `ok ${baseClasses}`;
 
         formulario.reset();
