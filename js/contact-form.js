@@ -36,11 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const subject = encodeURIComponent(`Nuevo Mensaje de Contacto de: ${name}`);
         const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
 
-        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
+        // Detectar si es un dispositivo móvil
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        window.open(gmailLink, '_blank');
-
-        estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
+        if (isMobile) {
+            // En celulares: Usamos mailto para abrir la App de correo (Gmail, Outlook, etc.)
+            window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+            estado.textContent = "Abriendo tu aplicación de correo... ¡Recuerda pulsar Enviar!";
+        } else {
+            // En computadoras: Abrimos Gmail Web en una nueva pestaña
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
+            window.open(gmailLink, '_blank');
+            estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
+        }
+        
         estado.className = `ok ${baseClasses}`;
 
         formulario.reset();
