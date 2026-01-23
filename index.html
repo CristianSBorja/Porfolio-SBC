@@ -78,7 +78,7 @@
                 En AlpacaDev nos enfocamos en desarrollar soluciones tecnológicas simples y accesibles, análisis funcionales, asesoramientos y propuestas creativas convencidos de que la digitalización es esencial en esta nueva era.
                 <br><br>
                 Nuestro objetivo es ofrecer respuestas únicas y personalizadas a cada negocio, sin importar su tamaño, para que puedan aprovechar al máximo las oportunidades que brinda la tecnología.
-                Ofrecemos un proceso integral y estructurado para garantizar el cumplimiento de los objetivos y necesidades del cliente de forma sólida y eficiente. Para ello usamos una metodología ágil buscando crear un dinamismo entre el cliente y nuestro equipo, que con una comunicación constante podamos llegar a las metas esperadas.
+                Ofrecemos un proceso integral y estructurado para garantizar el cumplimiento de los objetivos y necesidades del cliente de forma sólida y eficiente. Para ello usamos una metodología ágil buscando crear un dinamismo entre el cliente y nuestro equipo, y que con una comunicación constante podamos llegar a las metas esperadas.
             </p>
         </div>
     </section>
@@ -194,14 +194,26 @@
     <section id="proyectos" class="py-20 md:py-24 px-6 md:px-12 bg-[#1a1a1a]">
         <h2 class="text-3xl md:text-4xl font-semibold text-center mb-16 uppercase">Nuestros Proyectos</h2>
         
+        <!-- Botones de Filtro -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-white text-black font-medium transition-colors hover:bg-gray-200" data-filter="all">Todos</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-transparent text-white font-medium transition-colors hover:bg-white hover:text-black" data-filter="salud">Salud y Bienestar</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-transparent text-white font-medium transition-colors hover:bg-white hover:text-black" data-filter="comercio">Comercio y Gastronomía</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-transparent text-white font-medium transition-colors hover:bg-white hover:text-black" data-filter="deportes">Deportes y Gestión</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-transparent text-white font-medium transition-colors hover:bg-white hover:text-black" data-filter="entretenimiento">Entretenimiento</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white bg-transparent text-white font-medium transition-colors hover:bg-white hover:text-black" data-filter="legales">Legales</button>
+        </div>
+
         <!-- Grid de Proyectos -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
 
-            <!-- Proyecto 1 -->
-            <div class="flex flex-col items-center">
+            <!-- ================= SALUD Y BIENESTAR ================= -->
+
+            <!-- Proyecto 1: Despertar (Salud) -->
+            <div class="project-item flex flex-col items-center" data-category="salud">
                 <div class="w-full relative mb-6">
                     <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                        <div id="carousel-6" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <div id="carousel-1" class="w-full h-full flex transition-transform duration-500 ease-in-out">
                             <img src="./despertar/imag1.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                             <img src="./despertar/img2.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                             <img src="./despertar/img3.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
@@ -225,26 +237,38 @@
                             <img src="./despertar/img20.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
-                    <button id="prev-btn-6" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                    <button id="prev-btn-1" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
                         <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                     </button>
-                    <button id="next-btn-6" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                    <button id="next-btn-1" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
                         <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                     </button>
                 </div>
                 <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Sistema Gestión Clinico</h3>
-                    <p class="text-gray-300 max-w-lg">Plataforma web para gestión de paciente, especialistas, turnos, grupos de pacientes y especialistas asignados, insumos adquiridos, metrica de todo lo antes mencionado, tambien para creacion de noticas, momentos destacados, manejo de msj provientes de usuarios, e importacion o exportacion de archivos</p>
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión Clínica Terapéutica</h3>
+                    <p class="text-gray-300 max-w-lg">Plataforma web diseñada para la gestión de pacientes, especialistas y turnos. Permite administrar grupos de pacientes con especialistas asignados, controlar insumos adquiridos y obtener métricas detalladas de cada módulo. Además, incluye funcionalidades para la creación de noticias y momentos destacados, gestión de mensajes de usuarios e importación y exportación de archivos.</p>
                     <p class="text-gray-300 max-w-lg mb-5">(Terminado.)</p>
                 </div>
             </div>
-            <!-- Proyecto 2 -->
-            <div class="flex flex-col items-center">
+
+            <!-- Proyecto 3: Odontología (Salud) -->
+            <div class="project-item flex flex-col items-center" data-category="salud">
                 <div class="w-full relative mb-6">
                     <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
                         <div id="carousel-2" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                            <img src="./muebleria/index.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./muebleria/carrousell.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/footer.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/catalogo.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/detalle.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/modal_c.vacio.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/mensaje.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/modal_c.lleno.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/formulario.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                             <img src="./clinica odontologica/Odonto1.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto2.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto3.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto4.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto5.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto6.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto7.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto8.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto9.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto10.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto11.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto12.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./clinica odontologica/Odonto13.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
                     <button id="prev-btn-2" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
@@ -255,59 +279,25 @@
                     </button>
                 </div>
                 <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">E-commerce para Muebleria</h3>
-                    <p class="text-gray-300 max-w-lg">Desarrollo de una tienda online completa con pasarela de pagos y gestión de inventario.</p>
-                    <p class="text-gray-300 max-w-lg mb-5 ">(sprint 3 - desarrollo.)</p>
-                </div>
-            </div>
-
-             <!-- Proyecto 3 -->
-            <div class="flex flex-col items-center">
-                <div class="w-full relative mb-6">
-                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                        <div id="carousel-5" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                             <img src="./clinica odontologica/clinicas1.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas2.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas3.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas4.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas5.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas6.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas7.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas8.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas9.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas10.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas11.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas12.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./clinica odontologica/clinicas13.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                        </div>
-                    </div>
-                    <button id="prev-btn-5" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button id="next-btn-5" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión Clinicas Odontologicas</h3>
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión Clínicas Odontológicas</h3>
                     <p class="text-gray-300 max-w-lg">Sistema Completo diseñado para la gestión integral de una clínica odontológica. Permite visualizar la agenda diaria, administrar pacientes, acceder a fichas clínicas con historial e odontograma interactivo, y consultar estadísticas generales. La interfaz es limpia, moderna e intuitiva, pensada para facilitar el trabajo diario del profesional en consultorio.</p>
                     <p class="text-gray-300 max-w-lg mb-5">(Fase Boceto.)</p>
                 </div>
             </div>
 
-
-
-            <!-- Proyecto 4 -->
-            <div class="flex flex-col items-center">
+            <!-- Proyecto 11: Veterinaria (Salud) -->
+            <div class="project-item flex flex-col items-center" data-category="salud">
                 <div class="w-full relative mb-6">
                     <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
                         <div id="carousel-3" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                            <img src="./heladeria/session.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./heladeria/caja.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./heladeria/productos.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./heladeria/ventas.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./heladeria/compra.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
-
+                             <img src="./Veterinaria/Veterinaria1.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria2.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria3.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria4.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria5.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria6.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria7.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./Veterinaria/Veterinaria8.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
                     <button id="prev-btn-3" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
@@ -318,17 +308,124 @@
                     </button>
                 </div>
                 <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión para Heladeria</h3>
-                    <p class="text-gray-300 max-w-lg">Aplicacion para gestion de ventas y carga de productos para heladeria, con pasarela de pagos </p>
-                    <p class="text-gray-300 max-w-lg mb-5 ">(sprint 3 - desarrollo.)</p>
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de gestión para veterinarias</h3>
+                    <p class="text-gray-300 max-w-lg">Sistema de gestión administrativa para clínicas veterinarias que centraliza turnos, clientes, mascotas y facturación en una sola plataforma. El dashboard ofrece una visualización clara de la agenda diaria, alertas de vacunas y tratamientos, control de stock y estadísticas generales, con una interfaz pet-friendly, moderna y fácil de usar, pensada para optimizar el trabajo diario del equipo veterinario.</p>
+                    <p class="text-gray-300 max-w-lg mb-5">(Fase Boceto.)</p>
                 </div>
             </div>
 
-            <!-- Proyecto 5 -->
-            <div class="flex flex-col items-center">
+            <!-- ================= COMERCIO Y GASTRONOMÍA ================= -->
+
+            <!-- Proyecto 2: Mueblería (Comercio) -->
+            <div class="project-item flex flex-col items-center" data-category="comercio">
                 <div class="w-full relative mb-6">
                     <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
                         <div id="carousel-4" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./muebleria/index.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./muebleria/carrousell.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/footer.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/catalogo.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/detalle.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/modal_c.vacio.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/mensaje.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/modal_c.lleno.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0"> <img src="./muebleria/formulario.png" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-4" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-4" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">E-commerce para Mueblería</h3>
+                    <p class="text-gray-300 max-w-lg">Desarrollo de una tienda online completa con pasarela de pagos y gestión de inventario.</p>
+                    <p class="text-gray-300 max-w-lg mb-5 ">(Sprint 3 - Desarrollo.)</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Heladería (Comercio) -->
+            <div class="project-item flex flex-col items-center" data-category="comercio">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-5" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./heladeria/session.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./heladeria/caja.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./heladeria/productos.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./heladeria/ventas.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./heladeria/compra.jfif" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+
+                        </div>
+                    </div>
+                    <button id="prev-btn-5" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-5" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión para Heladería</h3>
+                    <p class="text-gray-300 max-w-lg">Aplicacion para gestión de ventas y carga de productos para heladeria, con pasarela de pagos </p>
+                    <p class="text-gray-300 max-w-lg mb-5 ">(Sprint 3 - Desarrollo.)</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 9: Pizzería (Comercio) -->
+            <div class="project-item flex flex-col items-center" data-category="comercio">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-6" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./pizzeria/img1.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img2.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img3.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img4.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img5.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img6.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img7.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img8.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./pizzeria/img9.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-6" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-6" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Pizzería App</h3>
+                    <p class="text-gray-300 max-w-lg">Este proyecto para una pizzeria se centró en la creación de una experiencia de usuario administrador y de operarios, un diseño minimalista y sencillo pero funcional.</p>
+                    <p class="text-gray-300 max-w-lg mb-5 ">(Terminado.)</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 8: Resto-Bar (Comercio) -->
+            <div class="project-item flex flex-col items-center" data-category="comercio">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-7" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./resto-bar/principal.png" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./resto-bar/menu.png" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-7" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-7" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Proyecto de Diseño Web Resto-Bar</h3>
+                    <p class="text-gray-300 max-w-lg">Este proyecto para un Resto-Bar se centró en la creación de una experiencia de usuario fluida y un diseño minimalista.</p>
+                    <p class="text-gray-300 max-w-lg mb-5 ">(Fase Boceto.)</p>
+                </div>
+            </div>
+
+            <!-- ================= DEPORTES Y GESTIÓN INSTITUCIONAL ================= -->
+
+            <!-- Proyecto 5: Federación (Deportes) -->
+            <div class="project-item flex flex-col items-center" data-category="deportes">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-8" class="w-full h-full flex transition-transform duration-500 ease-in-out">
                             <img src="./federacion/inicio.jfif" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                             <img src="./federacion/noticias.jfif" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                             <img src="./federacion/dashboard.jfif" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
@@ -344,111 +441,35 @@
                             <img src="./federacion/pases.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
-                    <button id="prev-btn-4" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                    <button id="prev-btn-8" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
                         <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                     </button>
-                    <button id="next-btn-4" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                    <button id="next-btn-8" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-75 transition-colors">
                         <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                     </button>
                 </div>
                 <div class="text-center">
                     <h3 class="text-2xl font-semibold mb-2">Plataforma Web para Gestión de Federaciones</h3>
                     <p class="text-gray-300 max-w-lg">Aplicación web completa con gestión de jugadores, clubes, categorias, noticias, momento destacados, cursos, visualización de métricas de negocio en tiempo real y pasarela de pagos integrada.</p>
-                    <p class="text-gray-300 max-w-lg mb-5 ">(Fase de despliegue.)</p>
+                    <p class="text-gray-300 max-w-lg mb-5 ">(Fase Despliegue.)</p>
                 </div>
             </div>
 
-             <!-- Proyecto 6 -->
-            <div class="flex flex-col items-center">
-                <div class="w-full relative mb-6">
-                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                        <div id="carousel-5" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                             <img src="./club/dashboard.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/afiliado.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/categoria.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/diciplina.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/finanzas.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/Eventos.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./club/Rendimiento.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                        </div>
-                    </div>
-                    <button id="prev-btn-5" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button id="next-btn-5" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión para Clubes</h3>
-                    <p class="text-gray-300 max-w-lg">Sistema Completo con manejo de afiliados, categorias, diciplina, resultados, finanzas con su metrica de negocio en tiempo real para poder manejar completamente clubes deportivos, con posibles mejores acorde a lo que el cliente necesite.</p>
-                    <p class="text-gray-300 max-w-lg mb-5">(Fase Boceto.)</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 7 -->
-            <div class="flex flex-col items-center">
-                <div class="w-full relative mb-6">
-                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                        <div id="carousel-5" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                             <img src="./bingo/inicio.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./bingo/ganador.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./bingo/gest-cartones.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./bingo/metricas.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./bingo/pdf-estadisticas.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
-                        </div>
-                    </div>
-                    <button id="prev-btn-5" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button id="next-btn-5" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión Bingo</h3>
-                    <p class="text-gray-300 max-w-lg">Aplicación completa (para bingo presencial y no presencial) para la gestión de bingo, analitica de administracion de ganancias e informe en pdf de todo el bingo.</p>
-                    <p class="text-gray-300 max-w-lg mb-5">(Terminado.)</p>
-                </div>
-            </div>
-
-             <!-- Proyecto 8 -->
-            <div class="flex flex-col items-center">
-                <div class="w-full relative mb-6">
-                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                        <div id="carousel-1" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                            <img src="./resto-bar/principal.png" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./resto-bar/menu.png" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                        </div>
-                    </div>
-                    <button id="prev-btn-1" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button id="next-btn-1" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Proyecto de Diseño Web Moderno</h3>
-                    <p class="text-gray-300 max-w-lg">Este proyecto para un resto-bar se centró en la creación de una experiencia de usuario fluida y un diseño minimalista.</p>
-                    <p class="text-gray-300 max-w-lg mb-5 ">(Fase Boceto.)</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 9 -->
-            <div class="flex flex-col items-center">
+            <!-- Proyecto 6: Clubes (Deportes) -->
+            <div class="project-item flex flex-col items-center" data-category="deportes">
                 <div class="w-full relative mb-6">
                     <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
                         <div id="carousel-9" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                            <img src="./pizzeria/img1.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img2.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img3.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img4.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img5.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img6.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img7.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img8.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pizzeria/img9.jpeg" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                             <img src="./club/Club1.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club2.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club3.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club4.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club5.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club6.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club7.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club8.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club9.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./club/Club10.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
                     <button id="prev-btn-9" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
@@ -459,9 +480,69 @@
                     </button>
                 </div>
                 <div class="text-center">
-                    <h3 class="text-2xl font-semibold mb-2">Proyecto de Diseño Web Pizzeria</h3>
-                    <p class="text-gray-300 max-w-lg">Este proyecto para una pizzeria se centró en la creación de una experiencia de usuario administrador y de operarios, un diseño minimalista y sencillo pero funcional.</p>
-                    <p class="text-gray-300 max-w-lg mb-5 ">(Terminado.)</p>
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión para Clubes</h3>
+                    <p class="text-gray-300 max-w-lg">Sistema Completo con manejo de afiliados, categorias, diciplina, resultados, finanzas con su metrica de negocio en tiempo real para poder manejar completamente clubes deportivos, con posibles mejores acorde a lo que el cliente necesite.</p>
+                    <p class="text-gray-300 max-w-lg mb-5">(Fase Boceto.)</p>
+                </div>
+            </div>
+
+            <!-- ================= ENTRETENIMIENTO Y OTROS ================= -->
+
+            <!-- Proyecto 7: Bingo (Entretenimiento) -->
+            <div class="project-item flex flex-col items-center" data-category="entretenimiento">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-10" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                             <img src="./bingo/inicio.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./bingo/ganador.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./bingo/gest-cartones.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./bingo/metricas.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./bingo/pdf-estadisticas.jpeg" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-10" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-10" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestión Bingo</h3>
+                    <p class="text-gray-300 max-w-lg">Aplicación completa (para bingo presencial y no presencial) para la gestión de bingo, analítica de administración de ganancias e informe en pdf de todo el bingo.</p>
+                    <p class="text-gray-300 max-w-lg mb-5">(Terminado.)</p>
+                </div>
+            </div>
+
+            <!-- ================= AREA LEGALES ================= -->
+
+            <!-- Proyecto 10: Estudio Jurídico (Legales) -->
+            <div class="project-item flex flex-col items-center" data-category="legales">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-11" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                             <img src="./EsrudioJuridico/Estudio1.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio2.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio3.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio4.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio5.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio6.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio7.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio8.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="./EsrudioJuridico/Estudio9.png" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-11" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-11" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-black bg-opacity-75 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Sistema de Gestion para Estudio Juridico</h3>
+                    <p class="text-gray-300 max-w-lg">Sistema Completo diseñado para centralizar la gestión del estudio jurídico, permitiendo un control claro de causas, vencimientos y audiencias. Incluye un panel principal con KPIs clave, alertas automáticas de plazos y audiencias, gestión completa de causas con carpetas digitales, calendario unificado y trabajo colaborativo entre abogados con permisos por rol. Una solución profesional, segura y eficiente, pensada para mejorar la organización, evitar vencimientos y optimizar la toma de decisiones.</p>
+                    <p class="text-gray-300 max-w-lg mb-5">(Fase Boceto.)</p>
                 </div>
             </div>
 

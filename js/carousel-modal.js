@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    for (let i = 1; i <= 9; i++) initializeCarousel(i);
+    for (let i = 1; i <= 11; i++) initializeCarousel(i);
 
     const imageModal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
@@ -88,5 +88,33 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.key === 'ArrowLeft') navigateModal(-1);
             if (e.key === 'ArrowRight') navigateModal(1);
         }
+    });
+
+    // Lógica de filtrado de proyectos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Actualizar estilos de botones
+            filterButtons.forEach(b => {
+                b.classList.remove('bg-white', 'text-black');
+                b.classList.add('bg-transparent', 'text-white');
+            });
+            btn.classList.remove('bg-transparent', 'text-white');
+            btn.classList.add('bg-white', 'text-black');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projects.forEach(project => {
+                if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                    project.classList.remove('hidden');
+                    project.classList.add('flex');
+                } else {
+                    project.classList.add('hidden');
+                    project.classList.remove('flex');
+                }
+            });
+        });
     });
 });
