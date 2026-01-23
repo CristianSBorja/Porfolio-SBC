@@ -92,7 +92,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Lógica de filtrado de proyectos
     const filterButtons = document.querySelectorAll('.filter-btn');
+    const mobileFilterSelect = document.getElementById('mobile-filter-select');
     const projects = document.querySelectorAll('.project-item');
+
+    function applyFilter(filterValue) {
+        projects.forEach(project => {
+            if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                project.classList.remove('hidden');
+                project.classList.add('flex');
+            } else {
+                project.classList.add('hidden');
+                project.classList.remove('flex');
+            }
+        });
+    }
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -105,16 +118,30 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.classList.add('bg-white', 'text-black');
 
             const filterValue = btn.getAttribute('data-filter');
+            applyFilter(filterValue);
+            
+            // Sincronizar select móvil
+            if (mobileFilterSelect) {
+                mobileFilterSelect.value = filterValue;
+            }
+        });
+    });
 
-            projects.forEach(project => {
-                if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
-                    project.classList.remove('hidden');
-                    project.classList.add('flex');
+    if (mobileFilterSelect) {
+        mobileFilterSelect.addEventListener('change', (e) => {
+            const filterValue = e.target.value;
+            applyFilter(filterValue);
+
+            // Sincronizar botones de escritorio
+            filterButtons.forEach(b => {
+                if (b.getAttribute('data-filter') === filterValue) {
+                    b.classList.remove('bg-transparent', 'text-white');
+                    b.classList.add('bg-white', 'text-black');
                 } else {
-                    project.classList.add('hidden');
-                    project.classList.remove('flex');
+                    b.classList.remove('bg-white', 'text-black');
+                    b.classList.add('bg-transparent', 'text-white');
                 }
             });
         });
-    });
+    }
 });
