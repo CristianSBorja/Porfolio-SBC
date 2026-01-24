@@ -40,15 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const subject = encodeURIComponent(`Nuevo Mensaje de Contacto de: ${name}`);
         const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
 
+        // Quitamos espacios y preparamos el enlace de Gmail para todos los casos
+        const recipients = RECIPIENT_EMAIL.replace(/\s+/g, '');
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipients}&su=${subject}&body=${body}`;
+
         if (isMobile()) {
-            // En móviles usamos mailto para abrir la app de correo predeterminada (Gmail, Outlook, etc.)
-            // Quitamos espacios en los correos para evitar problemas con mailto
-            const recipients = RECIPIENT_EMAIL.replace(/\s+/g, '');
-            window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
-            estado.textContent = "Abriendo aplicación de correo...";
+            // En móviles usamos location.href para intentar forzar la apertura de la App de Gmail (App Links)
+            window.location.href = gmailLink;
+            estado.textContent = "Abriendo Gmail...";
         } else {
-            // En escritorio mantenemos la apertura de Gmail web
-            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
             const newWindow = window.open(gmailLink, '_blank');
             if (!newWindow) window.location.href = gmailLink;
             estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
