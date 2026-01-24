@@ -45,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipients}&su=${subject}&body=${body}`;
 
         if (isMobile()) {
-            // En móviles usamos location.href para intentar forzar la apertura de la App de Gmail (App Links)
-            window.location.href = gmailLink;
-            estado.textContent = "Abriendo Gmail...";
+            // Usamos mailto en móviles para asegurar que el texto (asunto y mensaje) aparezca redactado.
+            // La versión web de Gmail en móviles suele borrar el contenido, por eso es necesario mailto.
+            window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
+            estado.textContent = "Abriendo aplicación de correo...";
         } else {
             const newWindow = window.open(gmailLink, '_blank');
             if (!newWindow) window.location.href = gmailLink;
