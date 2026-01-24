@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
     function mandoElFormulario(event) {
         event.preventDefault();
 
@@ -36,14 +40,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const subject = encodeURIComponent(`Nuevo Mensaje de Contacto de: ${name}`);
         const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
 
-        // Usamos el enlace de Gmail para todos los dispositivos para asegurar el formato correcto
-        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
+        if (isMobile()) {
+            // En móviles usamos mailto para abrir la app de correo predeterminada (Gmail, Outlook, etc.)
+            // Quitamos espacios en los correos para evitar problemas con mailto
+            const recipients = RECIPIENT_EMAIL.replace(/\s+/g, '');
+            window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
+            estado.textContent = "Abriendo aplicación de correo...";
+        } else {
+            // En escritorio mantenemos la apertura de Gmail web
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${RECIPIENT_EMAIL}&su=${subject}&body=${body}`;
+            const newWindow = window.open(gmailLink, '_blank');
+            if (!newWindow) window.location.href = gmailLink;
+            estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
+        }
 
-        // Intentamos abrir en nueva pestaña; si se bloquea (común en móviles), redirigimos en la misma
-        const newWindow = window.open(gmailLink, '_blank');
-        if (!newWindow) window.location.href = gmailLink;
-        
-        estado.textContent = "Abriendo Gmail para enviar el mensaje... ¡Recuerda pulsar Enviar!";
         estado.className = `ok ${baseClasses}`;
 
         formulario.reset();
